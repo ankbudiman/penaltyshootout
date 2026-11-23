@@ -1,0 +1,23 @@
+{
+  "name": "penalty-shootout-kanason",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PENALTY SHOOTOUT! Featuring Coach Kanason - SK Sri Kelana ceremony game",
+  "scripts": {
+    "assets": "node scripts/make-asset-manifest.mjs",
+    "predev": "node scripts/make-asset-manifest.mjs",
+    "dev": "vite --host",
+    "prebuild": "node scripts/make-asset-manifest.mjs",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test:logic": "node scripts/test-logic.mjs",
+    "gen:audio": "python3 scripts/generate_placeholder_audio.py"
+  },
+  "dependencies": {
+    "three": "~0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

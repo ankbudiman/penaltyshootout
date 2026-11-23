@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PENALTY SHOOTOUT! - Featuring Coach Kanason</title>
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <div id="stage">
+    <canvas id="gl"></canvas>
+    <div id="ui">
+
+      <div id="loading"><div class="ld-title">PENALTY SHOOTOUT!</div><div class="ld-bar"><i id="loadbar"></i></div></div>
+
+      <section id="title" class="hidden">
+        <div class="shade"></div>
+        <div class="t-left">
+          <div class="brand brand-primary" data-brand="sk">
+            <img alt="SK Sri Kelana" hidden />
+            <div class="fallback"><span class="crest">SK</span><span class="wm">SK SRI KELANA</span></div>
+          </div>
+          <div class="event">HARI ANUGERAH KECEMERLANGAN KOKURIKULUM</div>
+          <h1><span class="l1">PENALTY</span> <span class="l2">SHOOTOUT!</span></h1>
+          <div class="subtitle">FEATURING COACH KANASON</div>
+          <button id="start-btn" type="button">START GAME</button>
+          <div class="start-hint">Click START GAME or press ENTER</div>
+        </div>
+        <div class="t-right">
+          <div class="stripe s1"></div><div class="stripe s2"></div>
+          <div class="portrait">
+            <img id="portrait-img" alt="Coach Kanason" hidden />
+            <svg id="portrait-fallback" viewBox="0 0 400 520"><defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3d44"/><stop offset="1" stop-color="#15161a"/></linearGradient></defs><rect width="400" height="520" fill="url(#pg)"/><circle cx="200" cy="170" r="78" fill="#24262b"/><path d="M40 520 C40 380 120 320 200 320 C280 320 360 380 360 520Z" fill="#24262b"/></svg>
+          </div>
+          <div class="nameplate"><b>COACH KANASON</b><span>HEAD COACH, SELANGOR FC SOCCER SCHOOL</span></div>
+        </div>
+        <div class="t-bottom">
+          <div class="ctrl-ind"><i></i><span>WAITING FOR CONTROLLER</span></div>
+          <div class="brand brand-support" data-brand="fc">
+            <img alt="Selangor FC Soccer School" hidden />
+            <div class="fallback"><span class="wm">SELANGOR FC SOCCER SCHOOL</span></div>
+          </div>
+          <button id="calib-open" type="button" class="linkbtn">CONTROLLER TEST (C)</button>
+        </div>
+      </section>
+
+      <section id="hud" class="hidden">
+        <div class="hud-brand">
+          <div class="brand brand-primary mini" data-brand="sk"><img alt="SK Sri Kelana" hidden /><div class="fallback"><span class="crest">SK</span><span class="wm">SK SRI KELANA</span></div></div>
+          <span class="hud-title">PENALTY SHOOTOUT!</span>
+        </div>
+        <div class="ctrl-ind hud-ctrl"><i></i><span>WAITING FOR CONTROLLER</span></div>
+        <div id="banner" class="hidden"></div>
+        <div id="hint" class="hidden"></div>
+      </section>
+
+      <div id="goalfx" class="hidden"><div class="bar b1"></div><div class="bar b2"></div><div class="goal-text">GOALLLLLL!!!</div></div>
+
+      <section id="final" class="hidden">
+        <div class="f-shade"></div>
+        <div class="f-top brand brand-primary" data-brand="sk"><img alt="SK Sri Kelana" hidden /><div class="fallback"><span class="crest">SK</span><span class="wm">SK SRI KELANA</span></div></div>
+        <div class="f-body">
+          <div class="f-goal">GOALLLLLL!!!</div>
+          <div class="f-ribbon">PENALTI BERJAYA!</div>
+          <div class="f-congrats">TAHNIAH,</div>
+          <div class="f-name">COACH KANASON!</div>
+        </div>
+        <div class="f-bottom">
+          <div class="brand brand-support" data-brand="fc"><img alt="Selangor FC Soccer School" hidden /><div class="fallback"><span class="wm">SELANGOR FC SOCCER SCHOOL</span></div></div>
+          <div class="f-event">HARI ANUGERAH KECEMERLANGAN KOKURIKULUM</div>
+        </div>
+      </section>
+
+      <div id="pause" class="hidden"><div>PAUSED</div><small>Press START / ESC to resume</small></div>
+
+      <section id="calib" class="hidden">
+        <div class="panel">
+          <h2>CONTROLLER TEST</h2>
+          <div class="row"><span id="cal-status">WAITING FOR CONTROLLER</span><span id="cal-name"></span></div>
+          <div class="cal-grid">
+            <div class="stickbox"><div id="cal-dot"></div></div>
+            <div id="cal-values"></div>
+            <div id="cal-buttons"></div>
+          </div>
+          <div id="cal-shoot" class="shootlamp">SHOOT NOT PRESSED</div>
+          <div class="row small"><span>SHOOT BUTTON: <b id="cal-shootbtn">0</b></span><span>STICK AXES X / Y: <b id="cal-axes">0 / 1</b></span></div>
+          <div class="row">
+            <button id="cal-learn-btn" type="button">LEARN SHOOT BUTTON</button>
+            <button id="cal-learn-stick" type="button">LEARN STICK</button>
+            <button id="cal-reset" type="button">RESET MAPPING</button>
+            <button id="cal-close" type="button">CLOSE</button>
+          </div>
+          <p id="cal-msg">Wake the controller by pressing any button. Keyboard test: arrows/WASD aim, SPACE/ENTER shoot.</p>
+        </div>
+      </section>
+
+      <div id="resetring" class="hidden"><i></i><span>RESETTING...</span></div>
+      <div id="devbox" class="hidden"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
